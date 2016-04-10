@@ -1,192 +1,67 @@
+
+
+@include('cabecera')
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-       
-/* COMIENZA EL SLIDER */
-
-
-
-/* Makes images fully responsive */
-
-.img-responsive,
-.thumbnail > img,
-.thumbnail a > img,
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  display: block;
-  
-  height: auto;
-}
-
-/* ------------------- Carousel Styling ------------------- */
-
-.carousel-inner {
-  border-radius: 15px;
-  margin-top: -20%;
-
-}
-
-.carousel-caption {
-  background-color: rgba(0,0,0,.5);
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 10;
-  padding: 0 0 10px 25px;
-  color: #fff;
-  text-align: left;
-}
-
-.carousel-indicators {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  width: 100%;
-  z-index: 15;
-  margin: 0;
-  padding: 0 25px 25px 0;
-  text-align: right;
-}
-
-.carousel-control.left,
-.carousel-control.right {
-  background-image: none;
-}
-/*FIN DEL SLIDER */
-
-
-
-.section-white{
-  margin:auto;
-  margin-top: -30%;
-}
-
-.twitter-timeline{
-
-margin-right: 20%;
-margin-left: 30%;
-
-
-}
-
-
-
-
-.fa-cogs, .fa-comment, .fa-thumbs-o-up, .fa-laptop {
-  background-color: #C33838;
-  border-radius: 6px;
- 
-}
-
-.caption2{
-  /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
- display: inline-block;
-  margin-right: 8%;
-  margin-left: -5%;
-  margin-top: -15%;
-
-
-}
-p{
-  text-align: center;
-
-}
-
-h4{
-  text-align: center;
-}
-
-.benefits-grid-ico{
-  margin-left: 60px;
-}
-
-
-
-.carousel{
-  width: 80%;
-  
-  margin-top: 2%;
-}
-
-
-
-
-
-       
-    </style>
+<link rel="stylesheet" href="css/app.css" />
    
-@include('cabecera')
+
  
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
 
-
-                 <!--SLIDER METER EN OTRO ARCHIVO -->
-
-  <section class="section-white">
-  <div class="container">
-
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-      </ol>
- 
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner">
-
-        <div class="item active">
-
-          <img   width="1342" src="imagenes/slider3.jpg" alt="...">
-          
-         
-        </div>
-
-        <div class="item ">
-
-
-          <img width="1342" src="imagenes/fondoslider.jpg" alt="...">
-       
-          
-        </div>
-        <div class="item">
-          <img width="1342" src="imagenes/slider2.jpg" alt="...">
-          
-        </div>
-        
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="imagenes/fondoslider.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h3>Chania</h3>
+        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
       </div>
-
-      <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-      </a>
-      <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-      </a>
     </div>
 
+    <div class="item">
+      <img src="imagenes/slider2.jpg" alt="Chania">
+      <div class="carousel-caption">
+        <h3>Chania</h3>
+        <p>The atmosphere in Chania has a touch of Florence and Venice.</p>
+      </div>
+    </div>
+
+    <div class="item">
+      <img src="imagenes/slider3.jpg" alt="Flower">
+      <div class="carousel-caption">
+        <h3>Flowers</h3>
+        <p>Beatiful flowers in Kolymbari, Crete.</p>
+      </div>
+    </div>
+
+    
   </div>
-</section>
 
-<!-- HASTA AQUI EL SLIDER -->
-
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
  
    
-    <div class="benefits-grid wf-container icons-bg accent-bg light-hover-bg custom-icon-color accent-icon-hover-color">
+   <div class="iconos">
 
-      <div class="caption2">
-
-    
-      
+     <div class="caption2">
         
 <a href="{{ url('/servicios') }}" class="benefits-grid-ico fadeInDown animate-element animation-triggered start-animation">
 
@@ -224,11 +99,14 @@ h4{
          <a href="" class="benefits-grid-ico fadeInDown animate-element animation-triggered start-animation" > 
 
            <img src="imagenes/people-icon.png" alt=""></a> 
-
-           <h4>Clientes</h4>
+          
+          <div class="clientes">
+             <h4>Clientes</h4>
 
            <p>infórmate de las empresas que <br>
             contratan nuestros servicios.</p>
+          </div>
+          
 
          </div>
 
@@ -237,18 +115,28 @@ h4{
         <a href="" class="benefits-grid-ico fadeInDown animate-element animation-triggered start-animation"> 
 
             <img src="imagenes/pointer-2-icon.png" alt=""></a> 
-
+          
+          <div class="blog">
             <h4>Blog</h4>
 
             <p>Visita nuestros últimos trabajos <br>
               y entradas.</p>
+          </div>
+            
 
      
 
 </div>
+            
+
+   </div>
+
+     <div class="espacio">
+       
+     </div>
     
 
-  </div>
+
 
   <a class="twitter-timeline" href="https://twitter.com/belinker_es" data-widget-id="711928724225187840">Tweets por el @belinker_es.</a>
 <script>
@@ -273,4 +161,11 @@ fjs.parentNode.insertBefore(js,fjs);
 </body>
 </html>
 
+</div>
+
+</div>
+ 
+
+
+     </div>
 @include('pie')

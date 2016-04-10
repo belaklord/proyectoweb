@@ -1,32 +1,6 @@
 @include('cabecera')
 
-<style>
-	.thumbnail{
-
-        /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-    width:1200px;
-    margin-top: -73%;
-    position: relative;
-    margin-left: -10%;
-    border:none;
-    background: transparent;
-
-    
- }
-
- p{
-	margin:auto;
-	margin-top: -60%;
- }
-
-</style>
+<link rel="stylesheet" href="css/contrato.css" />
 
 
     @if(!Auth::user())

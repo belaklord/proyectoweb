@@ -1,17 +1,5 @@
-     <!-- PIE DE LAS PÁGINAS -->
-<style type="text/css">
 
-
-    .icono2{
-        width: 40px;
-        height: 40px;
-        margin-left: 20px;
-        margin-top: 5px;
-    }
-
-  
-</style>
-
+<link rel="stylesheet" href="css/pie.css" />
 
      <nav  class="navbar navbar-inverse navbar-static-top">
 

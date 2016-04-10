@@ -6,167 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Belinker</title>
+     
+   <link rel="stylesheet" href="css/cabecera.css" />
+
+   <script src="js/cabecera.js" type="text/javascript"></script>
+
+
+   <script>
+
+   /*
+   marcacion de los botones de la cabecera 
+   */
+
+    window.onload = function(){
+
+        var URLactual = window.location;
+
+        if(URLactual == "http://localhost/proyecto/public/servicios"){
+
+
+             document.getElementById("tab_2").classList.add('active');
+
+        }
+
+        else if(URLactual == "http://localhost/proyecto/public/"){
+
+             document.getElementById("tab_1").classList.add('active');
+        }
+
+        else if(URLactual == "http://localhost/proyecto/public/tarifas"){
+
+             document.getElementById("tab_3").classList.add('active');
+        }
+
+
+        else if(URLactual == "http://localhost/proyecto/public/belinker"){
+
+             document.getElementById("tab_4").classList.add('active');
+        }
+
+
+        else if(URLactual == "http://localhost/proyecto/public/blog"){
+
+             document.getElementById("tab_5").classList.add('active');
+        }
+
+        else if(URLactual == "http://localhost/proyecto/public/contacto"){
+
+             document.getElementById("tab_6").classList.add('active');
+        }
+
+    }
+
+
+   </script>
+
 
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+  
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-
-<style>
-     body {
-            font-family: 'Lato';
-            background: #f9f9f9 url('imagenes/fondo.jpg') no-repeat fixed center center;
-            background-size: cover;
-        }
-
-        .fa-btn {
-            margin-right: 6px;
-        }
-
-        .row{
-                /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-            background-color: white;
-            box-shadow: 0px 2px 4px;
-            width: 70%;
-            height: 1600px;
-            margin-top: -10%;
-            margin-left: 14%;
-
-        }
-
-        .col-sm-1  {
-   width: 100%;
-  
-    margin-left: 28%;
-    margin-top: 40%;
-    margin-bottom: -7%;
-
-
-  }
-
-  .navbar-inverse{
-
-            width: 70.2%;
-            margin-left: 13.9%;
-        
-    }
-
-
- .caption{
-      /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-    
-   
-  
-    
     
 
- }
-
- .thumbnail{
-
-        /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-    width:800px;
-    position: relative;
-    margin-top: -65%;
-    margin-left: -15%;
-    border:none;
-    background: transparent;
-
-    
- }
-
-.benefits-grid{
- 
-  width: 1200px;
-  margin-left: 20%;
-  margin-top: -13%;
- 
-  position: relative;
-}
 
 
-
-
- .btn-primary{
-
-    width: 100px;
-    margin-right: 10px;
-    background-color: #437BB3;
-    border:2px solid black;
-
-
- }
-
-.btn-primary:hover{
-   
-    color:black;
-    font-weight: bold;
-    
-}
-
-.fa-facebook-square {
-    
-    color: #58A2D4;
- 
-}
-
-.fa-twitter-square{
-
-color: #58A2D4;
-
-    margin-top: 6%;
-}
-
-.icono{
-    width: 70px;
-
-
-}
-
-div.caption{
-    margin-left: -10%;
-}
-
-.navbar-collapse{
-
-    float:right;
-}
-
-.navbar-right{
-   
-
-    margin-left: 40%;
-    margin-top: 2%;
-
-
-}
-
-
-
-</style>
  <body id="app-layout">
 <nav class="navbar navbar-inverse navbar-static-top">
         <p class="navbar-text">
@@ -225,14 +131,18 @@ div.caption{
                       
                       </li>
                     @else
+                        <ul class=" nav navbar-nav login">
+                            <li ><a href="{{ url('/login') }}">Logeate</a></li>
+                        <li ><a href="{{ url('/register') }}">Registrate</a></li>
 
-                      <li><a href="{{ url('/login') }}">Logeate</a></li>
-                        <li><a href="{{ url('/register') }}">Registrate</a></li>
+                         <a  href="https://www.facebook.com/Belinker.es?fref=ts" target="_blank"> <i class="fa fa-facebook-square fa-2x"></i></a>
+                    <a  href="https://twitter.com/belinker_es" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+                        </ul>
+                      
                         
                     @endif
                     
-                     <a  href="https://www.facebook.com/Belinker.es?fref=ts" target="_blank"> <i class="fa fa-facebook-square fa-2x"></i></a>
-                    <a  href="https://twitter.com/belinker_es" target="_blank"><i class="fa fa-twitter-square fa-2x"></i></a>
+                    
 
                     
                   
@@ -244,45 +154,34 @@ div.caption{
          </nav>
 
           <div class="row">
-  <div class="col-sm-1 col-md-4">
-    <div class="thumbnail">
-
-<div class="caption">
-   
-    <a href="home" ><img class="icono" srcset="http://belinker.es/wp-content/uploads/2015/07/belinker2.png 1x, http://belinker.es/wp-content/uploads/2015/07/belinker2.png 2x" 
-        alt="Belinker"  src="http://belinker.es/wp-content/uploads/2015/07/belinker2.png"></a>
- </div>
-                <div class=" navbar-right">
-
-                <ul class="nav navbar-nav">
 
 
-                    <li ><a  href="{{ url('/home') }}">Inicio</a></li>
-                </ul>
+    <div class="cabecera">
 
-                  <ul class="nav navbar-nav">
-                    <li><a  href="{{ url('servicios') }}">Servicios</a></li>
-                </ul>  
+       
+<img class="logo" src="http://belinker.es/wp-content/uploads/2015/07/belinker2.png" alt="belinker">
 
-                 <ul class="nav navbar-nav">
-                    <li><a  href="{{ url('/tarifas') }}">Tarifas</a></li>
-                </ul>
 
-                <ul class="nav navbar-nav">
-                    <li><a  href="{{ url('/home') }}">Belinker</a></li>
-                </ul>
+<ul class="nav nav-pills">
+  <li  id="tab_1"><a href="{{ url('/home') }}">INICIO</a></li>
+  <li id="tab_2"><a  href="{{ url('/servicios') }}">SERVICIOS</a></li>
+  <li id="tab_3"><a href="{{ url('/tarifas') }}">TARIFAS</a></li>
+  <li id="tab_4"><a href="{{ url('/home') }}">BELINKER</a></li>
+  <li id="tab_5"><a href="{{ url('/home') }}">BLOG</a></li>
+  <li id="tab_6"><a href="{{ url('/contacto') }}">CONTACTO</a></li>
 
-                <ul class="nav navbar-nav">
-                    <li><a  href="{{ url('/home') }}">Blog</a></li>
-                </ul>
-                
-                <ul class="nav navbar-nav ">
-                    <li><a  href="{{ url('contacto') }}">Contacto</a></li>
-                </ul>
 
-            </div>
-            </div>
-            </div>
+</ul>
+
+
+
+    </div>
+
+
+           
+
+
+ 
         </body>
 
 

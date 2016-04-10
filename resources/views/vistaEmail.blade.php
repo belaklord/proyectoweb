@@ -1,36 +1,7 @@
 
 @include('cabecera')
 
-<style>
-
-.thumbnail{
-
-        /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-    width:1200px;
-    position: relative;
-    margin-left: -10%;
-    border:none;
-    background: transparent;
-
-    
- }
-
-
-
-.panel-success{
-	margin:auto;
-	margin-top: -40%;
-}
-	
-</style>
-
+<link rel="stylesheet" href="css/vistaemail.css" />
 
 <div class="panel panel-success">
 

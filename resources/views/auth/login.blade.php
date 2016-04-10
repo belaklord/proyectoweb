@@ -1,35 +1,8 @@
 
 
-
-
 @include('cabecera')
-<style>
-   .thumbnail{
 
-        /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-    width:1200px;
-    position: relative;
-    
-    margin-top: -73%;
-    margin-left: -10%;
-    border:none;
-    background: transparent;
-
-    
- }
-
-.col-md-8{
-    margin-top: -70%;
-}
-
-</style>
+<link rel="stylesheet" href="css/login.css"/>
 
 <div class="container">
 
@@ -97,6 +70,7 @@
     </div>
 
 </div>
-@include('pie')
 
+@include('pie')
+</div>
 </html>

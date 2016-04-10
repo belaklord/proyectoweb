@@ -1,35 +1,9 @@
 
+
 @include('cabecera')
 
+<link rel="stylesheet" href="css/registro.css" />
 
-
-<style>
-   
-.thumbnail{
-
-        /*
-                responsive 
-                */
-            display: -webkit-flex;
-            display: flex;
-            -webkit-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-    width:1200px;
-    position: relative;
-    
-    margin-top: -73%;
-    margin-left: -10%;
-    border:none;
-    background: transparent;
-
-    
- }
-.col-md-8{
-    margin-top: -70%;
-}
-
-</style>
 
 <div class="container">
  
@@ -140,6 +114,7 @@
 
 </div>
 <!-- en cada include del pie añadir una etiqueta de cierre de div -->
+
 @include('pie')
     
 </html>
