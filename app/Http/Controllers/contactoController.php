@@ -18,7 +18,18 @@ class contactoController extends Controller
      public function index()
     {
 
+
+
         return view('contacto');
+    }
+
+
+    public function tarifas($id){
+
+
+        return view('contacto');
+
+
     }
 
 
@@ -34,22 +45,40 @@ class contactoController extends Controller
 /*
 almacena el comentario en la base de datos y
 manda un email al admin con el comentario del usuario
+ o bien manda un email con la peticion de reparacioón del usuario
 
 */
     public function insertar(Request $request){
 
-
-
-					
+		
 			/*validamos los campos del formulario con el uso de fachadas */
 
 			$data = $request::all();
-			
-			$rules = [
-			'id_usuario' => 'required',
-			'comentario' => 'required',
+  
+  if(isset($data['cabecera'])){  // si existe cabecera es peticion de reparacion //
 
-			];
+    $rules = [
+      'id_usuario' => 'required',
+      'comentario' => 'required',
+      'cabecera' => 'required',
+      
+
+      ];
+
+
+  }
+
+  else{                           // si no, es consulta de usuario //
+
+    $rules = [
+      'id_usuario' => 'required',
+      'comentario' => 'required',
+      ];
+  }
+			
+			
+
+
 
 			$validator = Validator::make($data, $rules);
 			if($validator->fails()){
@@ -60,21 +89,46 @@ manda un email al admin con el comentario del usuario
 			$comentario->save();
 
       $comentario =  $data['comentario'];
-     
-			$datos = array(
+
+      if(isset($data['cabecera'])){
+
+         $cabecera = $data['cabecera'];
+
+          $datos = array(
     
     'contenido' => $comentario,
+    'cabecera' => $cabecera,
     
 );
+      }
 
+      else{
 
-
+         $datos = array(
+    
+    'contenido' => $comentario,
+   
+    
+);
+      }
+     
+     
        //se envia el array y la vista lo recibe en llaves individuales {{ $email }} , {{ $subject }}...
        \Mail::send('plantillaEmail', $datos ,function($message) use ($request)
        {
        	   $data = $request::all();
 
-           $asunto ="Consulta de un usuario";
+           if(isset($data['cabecera'])){
+
+
+            $asunto = "Peticion de Reparacion";
+           }
+           else{
+
+             $asunto ="Consulta de un usuario";
+           }
+
+
 			
            //remitente
            $message->from(Auth::user()->email, $data['id_usuario']);

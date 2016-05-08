@@ -29,7 +29,7 @@
 
         }
 
-        else if(URLactual == "http://localhost/proyecto/public/"){
+        else if(URLactual == "http://localhost/proyecto/public/" || URLactual == "http://localhost/proyecto/public/home"){
 
              document.getElementById("tab_1").classList.add('active');
         }
@@ -166,8 +166,8 @@
   <li  id="tab_1"><a href="{{ url('/home') }}">INICIO</a></li>
   <li id="tab_2"><a  href="{{ url('/servicios') }}">SERVICIOS</a></li>
   <li id="tab_3"><a href="{{ url('/tarifas') }}">TARIFAS</a></li>
-  <li id="tab_4"><a href="{{ url('/home') }}">BELINKER</a></li>
-  <li id="tab_5"><a href="{{ url('/home') }}">BLOG</a></li>
+  <li id="tab_4"><a href="{{ url('/belinker') }}">BELINKER</a></li>
+  <li id="tab_5"><a href="{{ url('/blog') }}">BLOG</a></li>
   <li id="tab_6"><a href="{{ url('/contacto') }}">CONTACTO</a></li>
 
 

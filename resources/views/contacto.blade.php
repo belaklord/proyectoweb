@@ -1,6 +1,8 @@
 
 @include('cabecera')
 
+
+
 <link rel="stylesheet" href="css/contacto.css" />
 
 @if (Auth::user())

@@ -8,6 +8,8 @@ use App\Http\Requests;
 
 class tarifasController extends Controller
 {
+
+	
      public function index(){
 
     	return view('tarifas');
@@ -15,9 +17,6 @@ class tarifasController extends Controller
 
 
 
-    public function contrato(){
-
-    	return view('contrato');
-    }
+   
 
 }

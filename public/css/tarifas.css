@@ -48,6 +48,8 @@
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
+
+	/* Sombra del cuadro */
 	-moz-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
 	-webkit-box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);
 	box-shadow: 20px 0 10px -10px rgba(0, 0, 0, .15), -20px 0 10px -10px rgba(0, 0, 0, .15);    
@@ -200,3 +202,22 @@
 
 
 /*FIN DEL CSS DE LAS TARIFAS */
+
+
+
+textarea{
+    width: 100%;
+
+}
+
+.centrado{
+    text-align: center;
+    font-weight: bold;
+}
+
+.panel-heading{
+    text-align: center;
+}
+
+
+

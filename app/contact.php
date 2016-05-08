@@ -12,7 +12,7 @@ class contact extends Model
      * @var array
      */
     protected $fillable = [
-        'id_usuario', 'comentario'
+        'id_usuario', 'comentario','cabecera',
     ];
 
     /**

@@ -52,7 +52,12 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('servicios', 'ServiciosController@index');
     Route::get('vistaEmail', 'UserController@email');
     Route::get('tarifas', 'tarifasController@index');
-    Route::get('contrato', 'tarifasController@contrato');
+    Route::get('contacto/{id}', 'contactoController@tarifas');
+    Route::get('password', 'UserController@password');
+    Route::Post('User/recupera', 'UserController@recupera');
+    Route::get('belinker', 'belinkerController@index');
+    Route::get('blog', 'blogController@index');
+    
     
 
 });
